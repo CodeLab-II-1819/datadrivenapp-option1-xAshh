@@ -75,7 +75,7 @@ int main() {
 	
 	/*-----Number of times politics appears-----*/
 	
-	ifstream file;
+	/*ifstream file;
 	file.open("sampleTweets.csv"); //Open File
 
 	string str2; //variable to store each line
