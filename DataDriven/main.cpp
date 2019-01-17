@@ -12,9 +12,42 @@ int main() {
 
 	//Options
 	cout << "1=Total number of tweets in the data set \n2=Number of tweets that mention 'money' \n3=Number of tweets that mention 'politics'\n" << endl;
+	cout << "4=Tweets that contain the word 'Paris' \n5=Tweets that contain the word 'DreamWorks'\n6=Tweets that contain the word 'Uber' \n" << endl;
 	
 	
+	int choice; 
+	cin >> choice; //Option Selection 
+
 	
+
+	{switch (choice) {
+
+		{default:
+			cout << "Choice was not valid." << endl;
+
+			char ch = 'n';
+			cout << "Would you like to make another search? [y/n] \n " << endl;
+			cin >> ch;
+
+			if (ch == 'y' || ch == 'Y')
+				main();
+			else
+				cout << "Thank you for using the search engine! \nGoodbye!" << endl;
+			return 0; }
+
+		{case 1:
+			cout << "hello" << endl;
+			break;
+		};
+	}
+
+
+
+
+
+
+
+	};
 	
 	
 	
@@ -155,7 +188,7 @@ int main() {
 
 	/*-----Tweets with 'Uber'-----*/
 
-	ifstream file;
+	/*ifstream file;
 	file.open("sampleTweets.csv"); //Open File
 
 	string str5; //variable to store each line
