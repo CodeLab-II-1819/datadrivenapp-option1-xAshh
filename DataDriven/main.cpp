@@ -18,7 +18,7 @@ int main() {
 	cout << "9=All ReTweets\n10=Tweets during 21:00-21:59 \n \n \n" << endl; 
 	
 	
-	int choice; 
+	int choice; //Options variable
 	cin >> choice; //Option Selection 
 
 	
@@ -26,7 +26,7 @@ int main() {
 	{switch (choice) {
 		{ { { { { { { { { {
 
-			{default:
+			{default: //Invalid input 
 				cout << "\n \n \nChoice was not valid." << endl;
 
 				char ch = 'n'; //Variable for another search
