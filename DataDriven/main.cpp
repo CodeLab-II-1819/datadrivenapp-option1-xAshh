@@ -23,7 +23,7 @@ int main() {
 	
 
 	{switch (choice) {
-		{ { { { { { {
+		{ { { { { { { {
 
 			{default:
 				cout << "\n \n \nChoice was not valid." << endl;
@@ -204,11 +204,11 @@ int main() {
 
 
 			{case 7:/*--------------------------Number of times user search appears--------------------------*/
-				
-				string str4; //variable to store each line
+
+				string str6; //variable to store each line
 				int count4 = 0; //variable to store occurrences
 				string user1; //variable for user input
-				
+
 
 				cout << "Enter a word you would like to search for and discover how many tweets there are containing that word. \n \n" << endl;
 				cin >> user1; //input for user
@@ -219,8 +219,8 @@ int main() {
 				if (file.good()) { //check file is ready
 					cout << "Please wait...\n" << endl; // Waiting Message
 					while (!file.eof()) { //while not at end of file
-						getline(file, str4); //get line from file and store in str4 variable
-						if (str4.find(user1) <= str4.length()) { //compare str4 with user string
+						getline(file, str6); //get line from file and store in str6 variable
+						if (str6.find(user1) <= str6.length()) { //compare str6 with user string
 							count4++; //increment count
 						}
 					}
@@ -237,6 +237,33 @@ int main() {
 
 
 
+			{case 8: /*--------------------------Tweets with 'Uber'--------------------------*/
+				
+				string str7; //variable to store each line
+				string user2;//variable for user input
+
+				cout << "Enter a word you would like to search for within the tweets. \n \n" << endl;
+				cin >> user2; //input for user
+
+				ifstream file;
+				file.open("sampleTweets.csv"); //Open File
+				
+				if (file.good()) { //check file is ready
+					cout << "Please wait...\n" << endl; // Waiting Message
+					while (!file.eof()) { //while not at end of file
+						getline(file, str7); //get line from file and store in str7 variable
+						if (str7.find(user2) <= str7.length()) { //compare str7 with user2
+							cout << str7 << "\n" << endl; //Print line
+						}
+					}
+					file.close(); //close file
+				}
+				else {
+					cout << "File Error" << endl;
+				}
+				break;
+			};
+			/*-----------------------------------------------------------------------------*/
 
 
 
@@ -244,8 +271,7 @@ int main() {
 
 
 
-
-			} } } } } } } }
+			} } } } } } } } }
 
 
 	{ //Loop after a search
