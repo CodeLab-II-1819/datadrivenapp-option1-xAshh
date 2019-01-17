@@ -13,7 +13,8 @@ int main() {
 
 	//Options
 	cout << "1=Total number of tweets in the data set \n2=Number of tweets that mention 'money' \n3=Number of tweets that mention 'politics'\n" << endl;
-	cout << "4=Tweets that contain the word 'Paris' \n5=Tweets that contain the word 'DreamWorks'\n6=Tweets that contain the word 'Uber' \n \n \n \n \n" << endl;
+	cout << "4=Tweets that contain the word 'Paris' \n5=Tweets that contain the word 'DreamWorks'\n6=Tweets that contain the word 'Uber' \n " << endl;
+	cout << "7=Enter a word to see how many tweets contain it\n8=Enter a word and see what tweets contain that word\n\n\n" << endl; 
 	
 	
 	int choice; 
@@ -22,7 +23,7 @@ int main() {
 	
 
 	{switch (choice) {
-		{ { { { { {
+		{ { { { { { {
 
 			{default:
 				cout << "\n \n \nChoice was not valid." << endl;
@@ -202,6 +203,36 @@ int main() {
 
 
 
+			{case 7:/*--------------------------Number of times user search appears--------------------------*/
+				
+				string str4; //variable to store each line
+				int count4 = 0; //variable to store occurrences
+				string user1; //variable for user input
+				
+
+				cout << "Enter a word you would like to search for and discover how many tweets there are containing that word. \n \n" << endl;
+				cin >> user1; //input for user
+
+				ifstream file;
+				file.open("sampleTweets.csv"); //Open File
+
+				if (file.good()) { //check file is ready
+					cout << "Please wait...\n" << endl; // Waiting Message
+					while (!file.eof()) { //while not at end of file
+						getline(file, str4); //get line from file and store in str4 variable
+						if (str4.find(user1) <= str4.length()) { //compare str4 with user string
+							count4++; //increment count
+						}
+					}
+					file.close(); //close file
+				}
+				else {
+					cout << "File Error" << endl;
+				}
+				cout << user1 << " appears " << count4 << " times." << endl; //output number of times user string appears
+				break;
+			};
+			/*-----------------------------------------------------------------------------*/
 
 
 
@@ -214,7 +245,7 @@ int main() {
 
 
 
-			} } } } } } }
+			} } } } } } } }
 
 
 	{ //Loop after a search
