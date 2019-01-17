@@ -14,7 +14,8 @@ int main() {
 	//Options
 	cout << "1=Total number of tweets in the data set \n2=Number of tweets that mention 'money' \n3=Number of tweets that mention 'politics'\n" << endl;
 	cout << "4=Tweets that contain the word 'Paris' \n5=Tweets that contain the word 'DreamWorks'\n6=Tweets that contain the word 'Uber' \n " << endl;
-	cout << "7=Enter a word to see how many tweets contain it\n8=Enter a word and see what tweets contain that word\n\n\n" << endl; 
+	cout << "7=Enter a word to see how many tweets contain it\n8=Enter a word and see what tweets contain that word\n" << endl; 
+	cout << "9=All ReTweets\n10=Tweets during 21:00-21:59 \n \n \n" << endl; 
 	
 	
 	int choice; 
@@ -23,7 +24,7 @@ int main() {
 	
 
 	{switch (choice) {
-		{ { { { { { { {
+		{ { { { { { { { { {
 
 			{default:
 				cout << "\n \n \nChoice was not valid." << endl;
@@ -238,7 +239,7 @@ int main() {
 
 
 			{case 8: /*--------------------------Tweets with 'Uber'--------------------------*/
-				
+
 				string str7; //variable to store each line
 				string user2;//variable for user input
 
@@ -247,7 +248,7 @@ int main() {
 
 				ifstream file;
 				file.open("sampleTweets.csv"); //Open File
-				
+
 				if (file.good()) { //check file is ready
 					cout << "Please wait...\n" << endl; // Waiting Message
 					while (!file.eof()) { //while not at end of file
@@ -268,10 +269,56 @@ int main() {
 
 
 
+			{case 9: /*--------------------------All Retweets--------------------------*/
+				ifstream file;
+				file.open("sampleTweets.csv"); //Open File
+
+				string str8; //variable to store each line
+
+				if (file.good()) { //check file is ready
+					cout << "Please wait...\n" << endl; // Waiting Message
+					while (!file.eof()) { //while not at end of file
+						getline(file, str8); //get line from file and store in str8 variable
+						if (str8.find("RT @") <= str8.length()) { //compare str8 with 'RT @'
+							cout << str8 << "\n" << endl; //Print line
+						}
+					}
+					file.close(); //close file
+				}
+				else {
+					cout << "File Error" << endl;
+				}
+				break;
+			}
+			/*-----------------------------------------------------------------------------*/
 
 
 
-			} } } } } } } } }
+
+			{case 10: /*--------------------------Tweets between 21:00-21:59--------------------------*/
+				ifstream file;
+				file.open("sampleTweets.csv"); //Open File
+
+				string str9; //variable to store each line
+
+				if (file.good()) { //check file is ready
+					cout << "Please wait...\n" << endl; // Waiting Message
+					while (!file.eof()) { //while not at end of file
+						getline(file, str9); //get line from file and store in str9 variable
+						if (str9.find("21:") <= str9.length()) { //compare str9 with '21:59'
+							cout << str9 << "\n" << endl; //Print line
+						}
+					}
+					file.close(); //close file
+				}
+				else {
+					cout << "File Error" << endl;
+				}
+				break;
+			}
+			/*-----------------------------------------------------------------------------*/
+
+			} } } } } } } } } } }
 
 
 	{ //Loop after a search
