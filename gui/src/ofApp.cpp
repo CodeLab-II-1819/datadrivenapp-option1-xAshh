@@ -2,6 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	c1.set(51, 255, 255);
+	c2.set(255, 255, 255);
+
 
 }
 
@@ -11,7 +14,13 @@ void ofApp::update(){
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::draw() {
+	ofBackgroundGradient(c2, c1, OF_GRADIENT_LINEAR);
+
+	ofSetColor(0, 0, 0);
+	ofNoFill();
+	ofDrawRectangle(10, 10, -100, 900, 200);
+
 
 }
 

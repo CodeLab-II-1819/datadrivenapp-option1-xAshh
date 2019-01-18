@@ -22,5 +22,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 
-		//Change
+		ofColor c1, c2; 
+		ofImage bird; 
 };
