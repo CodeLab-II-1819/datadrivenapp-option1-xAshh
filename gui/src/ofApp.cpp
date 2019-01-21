@@ -26,8 +26,17 @@ void ofApp::draw() {
 	ofDrawRectangle(10, 300, -100, 650, 50); //Search bar
 	ofDrawRectangle(600, 300, -100, 60, 50);
 
+	ofDrawRectangle(10, 400, -100, 270, 50); //Query 1
+	ofDrawRectangle(10, 525, -100, 270, 50); //Query 2
+	ofDrawRectangle(10, 650, -100, 270, 50); //Query 3
+	ofDrawRectangle(10, 775, -100, 270, 50); //Query 4
+	ofDrawRectangle(10, 900, -100, 270, 50); //Query 5
 
-
+	ofDrawRectangle(390, 400, -100, 270, 50); //Query 6
+	ofDrawRectangle(390, 525, -100, 270, 50); //Query 7
+	ofDrawRectangle(390, 650, -100, 270, 50); //Query 8
+	ofDrawRectangle(390, 775, -100, 270, 50); //Query 9
+	ofDrawRectangle(390, 900, -100, 270, 50); //Query 10
 }
 
 //--------------------------------------------------------------
