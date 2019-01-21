@@ -19,7 +19,13 @@ void ofApp::draw() {
 
 	ofSetColor(0, 0, 0);
 	ofNoFill();
-	ofDrawRectangle(10, 10, -100, 900, 200);
+	ofDrawRectangle(10, 10, -100, 1450, 200);//Title
+
+	ofDrawRectangle(750, 300, -100, 1200, 700); //Output
+
+	ofDrawRectangle(10, 300, -100, 650, 50); //Search bar
+	ofDrawRectangle(600, 300, -100, 60, 50);
+
 
 
 }
