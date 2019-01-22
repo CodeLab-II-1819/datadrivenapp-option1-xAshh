@@ -24,5 +24,5 @@ class ofApp : public ofBaseApp{
 
 		ofColor c1, c2; 
 		ofImage bird; 
-		ofTrueTypeFont myFont, plainText; 
+		ofTrueTypeFont myFont, plainText, bigText; 
 };
