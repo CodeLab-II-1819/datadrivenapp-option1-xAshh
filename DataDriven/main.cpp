@@ -9,7 +9,7 @@ int main() {
 
 	/*-----Welcome/Greeting-----*/
 	cout << "\n\n\Hello! Welcome to this Tweet search Engine! \n" << endl;
-	cout << "Press the corresponding number to get searching!\n\n" << endl;
+	cout << "Press the corresponding number and then 'enter' to get searching!\n\n" << endl;
 
 	//Options
 	cout << "1=Total number of tweets in the data set \n2=Number of tweets that mention 'money' \n3=Number of tweets that mention 'politics'\n" << endl;
